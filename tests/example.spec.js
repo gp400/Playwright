@@ -9,20 +9,17 @@ test('Log in', async ({ context, page }) => {
     page.getByText('Acceso para estudiantes y egresados').click()
   ]);
 
-  await newPage.fill('input[name="loginfmt"]', 'g.pena52@unapec.edu.do');
+  await newPage.fill('input[name="loginfmt"]', ''); // Inserte su email
 
-  await newPage.locator('input[type="submit"]').click()
+  await newPage.locator('input[type="submit"]').click();
 
-  await newPage.fill('input[name="loginfmt"]', 'GABYgaby123@unapec');
+  await newPage.fill('input[name="passwd"]', ''); // Inserte su password
 
-  await newPage.locator('input[type="submit"]').click()
+  await newPage.locator('input[type="submit"]').click();
 
-  await newPage.getByText('No').click()
+  await newPage.locator('input[id="idBtn_Back"]').click();
 
-  // const [newPage2] = await Promise.all([
-  //   newPage.waitForURL("https://login.microsoftonline.com/d00470c1-2144-4ee6-88fe-6732519fc163"),
-  //   newPage.locator('input[id="idBtn_Back"]').click()
-  // ]);
+  
 
   // await expect(newPage2).toBeUndefined;
 });
