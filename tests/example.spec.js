@@ -18,10 +18,6 @@ test('Log in', async ({ context, page }) => {
   await newPage.locator('input[type="submit"]').click();
 
   await newPage.locator('input[id="idBtn_Back"]').click();
-
-  
-
-  // await expect(newPage2).toBeUndefined;
 });
 
 // test('get started link', async ({ page }) => {
