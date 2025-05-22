@@ -12,11 +12,11 @@ test('Automatizacion APEC', async ({ context, page }) => {
     page.getByText('Acceso para estudiantes y egresados').click()
   ]);
 
-  await newPage.fill('input[name="loginfmt"]', 'g.pena52@unapec.edu.do'); // Inserte su email
+  await newPage.fill('input[name="loginfmt"]', ''); // Inserte su email
 
   await newPage.locator('input[type="submit"]').click();
 
-  await newPage.fill('input[name="passwd"]', 'GABYgaby123@unapec'); // Inserte su password
+  await newPage.fill('input[name="passwd"]', ''); // Inserte su password
 
   await newPage.locator('input[type="submit"]').click();
 
